@@ -12,10 +12,13 @@
   <div class="container">
     <h1>File Sizing Microservice</h1>
     <hr />
-    <button>Upload</button><button>Get File Size</button>
+    <form action="/filesize" method="post" enctype="multipart/form-data">
+      <input type="file" name="uploadFile" /> <br />
+      <input type="submit" value="Submit" />
+    </form>
     <hr />
     <h3>Usage</h3>
-    <p>Use the form above to upload a file and click Get File Size to see the size in bytes.</p>
+    <p>Use the form above to upload a file and see the size in bytes.</p>
     <p>You will receive a JSON response with the file size:</p>
     <p><code>{"filename":"test.png", "size":79112}</code></p>
   </div>
